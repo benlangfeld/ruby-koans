@@ -10,12 +10,12 @@ class Rectangle
 	@points=[]
 	
 	#get the points and put them into an array
-	@corners.each do |corner|
-		for i in corner[0][0]..corner[3][0]
-			for j in corner[0][1]..corner[3][1]
-				point = [i, j]
-					@points << point
-			end
+	corners = @corners[0]
+	
+	for i in corners[0][0]..corners[3][0]
+		for j in corners[0][1]..corners[3][1]
+			point = [i, j]
+				@points << point
 		end
 	end
 	
