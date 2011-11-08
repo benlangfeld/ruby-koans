@@ -15,7 +15,7 @@ class Rectangle
 	for i in corners[0][0]..corners[3][0]
 		for j in corners[0][1]..corners[3][1]
 			point = [i, j]
-				@points << point
+			@points << point
 		end
 	end
 	
