@@ -9,19 +9,14 @@ class Rectangle
 	#initialize array
 	@points=[]
 	
-	#get start and end points
-	x = @corners[0][0][0]
-	end_x = @corners[0][2][0]
-	end_y = @corners[0][1][1]
-	
-	#go over the points and put them into the array
-	while x <= end_x
-		y = @corners[0][0][1]
-		while y <= end_y
-			@points << [x, y]
-			y += 1
+	#get the points and put them into an array
+	@corners.each do |corner|
+		for i in corner[0][0]..corner[2][0]
+			for j in corner[0][1]..corner[1][1]
+				point = [i, j]
+					@points << point
+			end
 		end
-		x += 1
 	end
 	
 	#return the array
