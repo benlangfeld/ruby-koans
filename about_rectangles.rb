@@ -6,7 +6,21 @@ class Rectangle
   end
 
   def all_unit_points
-    # Hint: Array#permutation
+	#initialize array
+	@points=[]
+	
+	#get the points and put them into an array
+	corners = @corners[0]
+	
+	for i in corners[0][0]..corners[3][0]
+		for j in corners[0][1]..corners[3][1]
+			point = [i, j]
+			@points << point
+		end
+	end
+	
+	#return the array
+	@points
   end
 end
 
